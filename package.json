@@ -1,0 +1,13 @@
+{
+  "name": "myredis1",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "hiredis": "^0.5.0",
+    "redis": "^2.8.0",
+    "simpl-schema": "^1.2.0"
+  }
+}
