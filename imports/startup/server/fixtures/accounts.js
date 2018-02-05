@@ -53,20 +53,21 @@ Meteor.startup(() => {
 
 
     // PATIENTS
-    if (dumydata.find().count() ==0) {
+    //if (dumydata.find().count() ==0) {
         for (i = 0; i < 10; i++) {
           const dumydataname="dumydata"+i;
             //console.log("create data:", Patients.insert({name:dumydataname}));
-            dumydata.insert({name:dumydataname});
+          //  dumydata.insert({name:dumydataname});
+            client.setSync(i,dumydataname);
             //client.setSync('marwa'+i,'AngularJS'+i,function(err,reply){
             // console.log(reply);
             //});
         }
-        const dumy=dumydata.find();
+      /*  const dumy=dumydata.find();
         console.log(dumy.count());
         dumy.forEach(function(item){
-          client.setSync(item._id,item.name)
-        })
+
+        })*/
 
       /*  console.log("after 100000");
         console.log("created 100000 dumy data");
@@ -82,6 +83,6 @@ Meteor.startup(() => {
         });*/
     //  }
       //  console.log("after readingggggg");
-    }
+    //}
 
 });
